@@ -49,6 +49,7 @@ docker-shell: set-docker-env-vars print-env-vars  ##@docker Run docker container
 	@docker run \
 		--rm \
     -it \
+    --gpus all \
     ${DOCKER_ENV_VARS} \
     -v $(HOME)/.ssh:/.ssh \
     -v $(HOME)/.aws:/root/.aws \
